@@ -26,7 +26,7 @@ You are a security professional at a large organization. You mainly work with th
 <a href="https://imgur.com/1Valzqd"><img src="https://i.imgur.com/1Valzqd.jpg" title="LC1.2" /></a>
 
 ---
-## Describe the permissions string
+## The Permissions String
 
 In the above image note that there is a series of 10 character strings that begin each line. These are permission strings, and they tell us what permissions are enabled on the given file or directory, as well as who has been given these levels of access. 
 
@@ -119,7 +119,7 @@ From there we can run `chmod g-x drafts` to remove `group` access to the drafts 
 And we can now confirm that `researcher2` is the only user allowed to access the `drafts` directory now, in compliance with company policy. 
 
 ---
-##Summary
+## Summary
 
 In completing this lab we have learned how to identify ourselves on a linux command line, navigate to a target directory and confirm our location, and list all of the files and directories we want to see, including hidden files. We've configured the permissions on these files and directories in accordance with company policy and reduced our attack surface in doing so. Only those owners who require access to these files now have access, and unnecessary permissions have been revoked where needed. In essense, we've strengthened one of the essential parts of the CIA Triad in our organization, namely Confidentiality. This is why regular audits are important; we must confirm that we aren't leaving holes in our attack surface to both internal and external threats. The Principle of Least Privilege requires that we only give permissions where absolutely necessary for employees to do their jobs, and of course to keep all unauthorized connections from outside the organzation from accessing our data. 
 
