@@ -30,7 +30,7 @@ You are a security professional at a large organization. You mainly work with th
 
 In the above image note that there is a series of 10 character strings that begin each line. These are permission strings, and they tell us what permissions are enabled on the given file or directory, as well as who has been given these levels of access. 
 
-In this section, we’ll first discuss the possible characters and what each means. Next we'll discuss the types of owners of files in linux, and then we will tie that into the permissions string so we can use it as a tool to understand what the permissions are on file and directories. 
+In this section, we’ll first discuss the possible characters and what each means. Next we'll discuss the types of owners of files in linux, and then we will tie that into the permissions string so we can use it as a tool to understand what the permissions are on files and directories. 
 
 As you may note on observation, each string consists of a series of letters or hyphens. The characters used are as follows:
 
