@@ -46,7 +46,7 @@ Next let’s observe that there are three types of owners in Linux:
 * Group - every user is part of some type of group. 
 * Other - this is considered to be all other users on the system. 
 
-From here we tie all of this information to the string itself. A useful way of conceptualizing these strings is to think of them as 1 + 3 + 3 + 3. In this case, the first character represents whether we are talking about a directory or file (`d` or `-` respectively), and the rest are “triplets” which pertain to one of three types of owners, that is users, groups, and others. In other words, characters 2-4 denote user permissions, 5-7 denote group permissions, and 8-10 denote other permissions.
+From here we tie all of this information to the string itself. A useful way of conceptualizing permission strings is to think of them as 1 + 3 + 3 + 3. In this case, the first character represents whether we are talking about a directory or file (`d` or `-` respectively), and the rest are “triplets” which pertain to one of three types of owners, that is users, groups, and others. In other words, characters 2-4 denote user permissions, 5-7 denote group permissions, and 8-10 denote other permissions.
 
 If all permissions were enabled for everyone, that would end up looking like: `-rwxrwxrwx`
 
