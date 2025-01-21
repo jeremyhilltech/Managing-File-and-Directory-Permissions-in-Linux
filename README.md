@@ -20,3 +20,5 @@ Your task is to examine existing permissions on the file system. You’ll need t
 3. We will be working in the projects directory, which we locate using the ls -a command to confirm its presence from our current working directory. 
 4. We then use the cd projects command to drop into that location. 
 5. Our instructions are to enumerate all of the files and directories within the projects and investigate permissions on several files. Here we see the returned information from the system using the ls -la command in order to include any hidden files in our current working directory. Below is the result, where we will dive into permissions. 
+
+'whoami'
