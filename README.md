@@ -1,4 +1,4 @@
-# Managing-Permissions-in-Linux
+# Managing-File-and-Directory-Permissions-in-Linux
 This lab serves as an exploration of permissions on directories and files within Linux. We will check permissions to ensure that each is properly configured for their respective user, group, or other owners. The point here is to get a taste of the Principle of Least Privilege, which states that only the minimum amount of access for files and directories should be granted for the completion of necessary tasks related to the use of the data. 
 
 ## Context:
