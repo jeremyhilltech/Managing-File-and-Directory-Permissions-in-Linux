@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://imgur.com/a/brXGfFp"><img src="https://imgur.com/a/brXGfFp" title="LC1.1" /></a>
+<a href="https://i.imgur.com/yq1dpRx.png"><img src="https://i.imgur.com/yq1dpRx.png" title="tux" /></a>
 </p>
 
 # Managing File and Directory Permissions in Linux
