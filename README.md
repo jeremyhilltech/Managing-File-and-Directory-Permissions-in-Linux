@@ -7,7 +7,7 @@ This lab serves as an exploration of permissions on directories and files within
 
 ## Context:
 
-For a list of commands used in this lab, please see the end of the lab. For more information on these commands and their options, please refer to the 'man' page for each of them inside your linux bash shell. Some items in this lab are highlighted as inline code ease of reading even though `not everything written that way is actually a code or command`. Screenshots are provided which show all actual commands being used. 
+For a list of commands used in this lab, please see the end of the lab. For more information on these commands and their options, please refer to the 'man' page for each of them inside your linux bash shell. Some items in this lab are highlighted as inline code for ease of reading and understanding the text even though `not everything written that way is actually a code or command`. Screenshots are provided which show all actual commands being used. 
 
 ## Scenario:
 You are a security professional at a large organization. You mainly work with their research team. Part of your job is to ensure users on this team are authorized with the appropriate permissions. This helps keep the system secure. Your task is to examine existing permissions on the file system. You’ll need to determine if the permissions match the authorization that should be given. If they do not match, you’ll need to modify the permissions to authorize the appropriate users and remove any unauthorized access.
