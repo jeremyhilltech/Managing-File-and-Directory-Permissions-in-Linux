@@ -46,7 +46,8 @@ Next let’s observe that there are three types of owners in Linux:
 * Group - every user is part of some type of group. 
 * Other - this is considered to be all other users on the system. 
 
-From here we tie all of this information to the string itself. A useful way of conceptualizing these strings is to think of them as 1 + 3 + 3 + 3. In this case, position 1 represents whether we are talking about a directory or  file (d or - respectively), and the rest are “triplets” which pertain to one of three types of owners, that is users, groups, and others. 
+From here we tie all of this information to the string itself. A useful way of conceptualizing these strings is to think of them as 1 + 3 + 3 + 3. In this case, the first character represents whether we are talking about a directory or file (`d` or `-` respectively), and the rest are “triplets” which pertain to one of three types of owners, that is users, groups, and others. In other words, characters 2-4 denote user permissions, 5-7 denote group permissions, and 8-10 denote other permissions.
+
 If all permissions were enabled for everyone, that would end up looking like: `-rwxrwxrwx`
 
 In the example `-rwxrwxrwx`, the hyphen in position 1 tells us we’re working with the permissions of a file. The first “triplet” of characters represent user permissions, the second triplet represents group permissions, and the last triplet represents other permissions. Now let’s take a look at our results again: 
@@ -54,7 +55,7 @@ In the example `-rwxrwxrwx`, the hyphen in position 1 tells us we’re working w
 <a href="https://imgur.com/rdtmKvG"><img src="https://i.imgur.com/rdtmKvG.jpg" title="LC1.2" /></a>
 
 If we take a look at the drafts directory, we see the permissions: `drwx--x---`
-Read from left to right, we confirm we’re working with a directory (d). We can see that users have read, write, and execute privileges, groups only have execute privileges, and others have no privileges. 
+Read from left to right, we confirm we’re working with a directory (`d`). We can see that users have read, write, and execute privileges, groups only have execute privileges, and others have no privileges. 
 
 ---
 ## Changing File Permissions
@@ -95,15 +96,17 @@ As you can see, we have now correctly configured .project_x.txt to be readable o
 ---
 ## Change Directory Permissions
 
-In Linux, it's actually the `x` (execute) permission that allows a given owner the ability to see or access a directory. Let's say that we discover that our drafts directory has incorrect permissions enabled. Company policy states that only the user has permission to access this directory. Our permissions tell us that currently, groups are also able to access this directory:
+In Linux, it's actually the `x` (execute) permission that allows a given owner the ability to see or access a directory. Let's say that we discover that our `drafts` directory has incorrect permissions enabled. Company policy states that only our user account (`researcher2`) has permission to access this directory. Our permissions tell us that currently, groups are also able to access this directory:
 
 <a href="https://imgur.com/2PAKxHe"><img src="https://i.imgur.com/2PAKxHe.jpg" title="LC4.1" /></a>
 
-In order to correct this, we have to do two things. First, we have to make sure that we are currently in the parent directory to drafts, in this case the projects directory. 
+In order to correct this, we have to do two things. First, we have to make sure that we are currently in the parent directory to `drafts`, in this case the `projects` directory. 
 
 From there we can run `chmod g-x drafts` to remove group access to the drafts directory:
 
 <a href="https://imgur.com/erNn46N"><img src="https://i.imgur.com/erNn46N.jpg" title="LC4.2" /></a>
+
+And we can now confirm that `researcher2` is the only user allowed to handle operations within the drafts directory, in compliance with company policy. 
 
 ---
 ##Summary
