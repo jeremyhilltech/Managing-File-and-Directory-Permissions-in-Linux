@@ -15,7 +15,7 @@ Your task is to examine existing permissions on the file system. You’ll need t
 
 <a href="https://imgur.com/3IbrWEp"><img src="https://i.imgur.com/3IbrWEp.jpg" title="LC1.1" /></a>
 
-1. We begin by establishing who we are using the whoami command, which returns that we are researcher2. 
+1. We begin by establishing who we are using the 'whoami' command, which returns that we are researcher2. 
 2. Next we need to know where we are, so we use the pwd command, which returns our working directory as /home/researcher2. 
 3. We will be working in the projects directory, which we locate using the ls -a command to confirm its presence from our current working directory. 
 4. We then use the cd projects command to drop into that location. 
