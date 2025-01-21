@@ -51,7 +51,7 @@ If all permissions were enabled for everyone, that would end up looking like: `-
 
 In the example `-rwxrwxrwx`, the hyphen in position 1 tells us we’re working with the permissions of a file. The first “triplet” of characters represent user permissions, the second triplet represents group permissions, and the last triplet represents other permissions. Now let’s take a look at our results again: 
 
-<a href="https://imgur.com/bxGt1Ox"><img src="https://i.imgur.com/bxGt1Ox.jpg" title="LC1.2" /></a>
+<a href="https://imgur.com/rdtmKvG"><img src="https://i.imgur.com/rdtmKvG.jpg" title="LC1.2" /></a>
 
 If we take a look at the drafts directory, we see the permissions: `drwx--x---`
 Read from left to right, we confirm we’re working with a directory (d). We can see that users have read, write, and execute privileges, groups only have execute privileges, and others have no privileges. 
@@ -69,14 +69,54 @@ Using `chmod` we must take into consideration that `u` = user, `g` = group, and 
 
 Let’s say that our organization does not allow others to have write access to *any* files. If we look closely, we can see that project_k.txt is currently configured incorrectly. To fix this, we’ll use the `chmod` command to alter the permissions for others on this file. 
 
-<a href="https://imgur.com/3IbrWEp"><img src="https://i.imgur.com/3IbrWEp.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/ag1Sr7a"><img src="https://i.imgur.com/ag1Sr7a.jpg" title="LC2.1" /></a>
 
+Highlighted we can see that this file does allow others to write to the file. Next, we run our chmod command and tell it to remove the write permission from others: 
 
+`chmod o-w project_k.txt` yields the following result:
 
+<a href="https://imgur.com/p2E6i7h"><img src="https://i.imgur.com/p2E6i7h.jpg" title="source: imgur.com" /></a>
 
+Seen above, we have removed the write permission from others on project_k.txt now, and that is reflected by running our ls -la command to check the current permissions in the directory. 
 
+---
+## Change File Permissions on a Hidden File
 
+You may have noticed that by using the `ls -la` command to view the files in this directory, we have been listing a file that begins with a `.`. The `-la` argument tells the system to show us all of the files, including hidden ones. Hidden files and directories begin with `.` in the file system. Now let’s say that .project_x.txt is an archived file, which is why it’s been hidden from the normal list view. Our company policy is that no one is to have write permissions for archived files, and only users and groups may have read permissions. Given this, we can see that this hidden file is misconfigured, as it currently allows for user and group to write to it, however groups are not able to read it.
 
+<a href="https://imgur.com/UJGLrwQ"><img src="https://i.imgur.com/UJGLrwQ.jpg" title="LC3.1" /></a>
+
+Let's change that by running `chmod u-w,g-w,g+r .project_x.txt` and we should see the following:
+
+<a href="https://imgur.com/TKtoIBe"><img src="https://i.imgur.com/TKtoIBe.jpg" title="LC3.2" /></a>
+
+As you can see, we have now correctly configured .project_x.txt to be readable only by users and groups. 
+
+---
+## Change Directory Permissions
+
+In Linux, it's actually the `x` (execute) permission that allows a given owner the ability to see or access a directory. Let's say that we discover that our drafts directory has incorrect permissions enabled. Company policy states that only the user has permission to access this directory. Our permissions tell us that currently, groups are also able to access this directory:
+
+<a href="https://imgur.com/2PAKxHe"><img src="https://i.imgur.com/2PAKxHe.jpg" title="LC4.1" /></a>
+
+In order to correct this, we have to do two things. First, we have to make sure that we are currently in the parent directory to drafts, in this case the projects directory. 
+
+From there we can run `chmod g-x drafts` to remove group access to the drafts directory:
+
+<a href="https://imgur.com/erNn46N"><img src="https://i.imgur.com/erNn46N.jpg" title="LC4.2" /></a>
+
+---
+##Summary
+
+In completing this lab we have learned how to identify ourselves on a linux command line, navigate to a target directory and confirm our location, and list all of the files and directories we want to see, including hidden files. We've configured the permissions on these files and directories in accordance with company policy and reduced our attack surface in doing so. Only those owners who require access to these files now have access, and unecessary permissions have been revoked where needed. In essense, we've strengthened one of the essential parts of the CIA Triad in our organization, namely Confidentiality. This is why regular audits are important; we must confirm that we aren't leaving holes in our attack surface to both internal and external threats. Least privilege requires that we only give permissions where absolutely necessary for employees to do their jobs, and of course to keep all unauthorized connections from outside the organzation from accessing our data. 
+
+---
+## Commands Used:
+`whoami` = tells you what user you are currently operating as in the system
+`ls` = list all items in the working directory, argument `-l` shows permissions, argument `-la` shows permissions and hidden files. 
+`pwd` = print the working directory
+`cd` = change directory
+`chmod` = (change mode) = changes file/directory permissions for users, groups, and others
 
 
 
