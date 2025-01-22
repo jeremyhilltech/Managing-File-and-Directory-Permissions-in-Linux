@@ -125,11 +125,11 @@ In completing this lab we have learned how to identify ourselves on a linux comm
 
 ---
 ## Commands Used in this Lab:
-`whoami` = tells you what user you are currently operating as in the system
-`ls` = list all items in the working directory, argument `-l` shows permissions, argument `-la` shows permissions and hidden files. 
-`pwd` = print the working directory
-`cd` = change directory
-`chmod` = (change mode) = changes file/directory permissions for users, groups, and others
+* `whoami` = tells you what user you are currently operating as in the system
+* `ls` = list all items in the working directory, argument `-l` shows permissions, argument `-la` shows permissions and hidden files. 
+* `pwd` = print the working directory
+* `cd` = change directory
+* `chmod` = (change mode) = changes file/directory permissions for users, groups, and others
 
 
 
