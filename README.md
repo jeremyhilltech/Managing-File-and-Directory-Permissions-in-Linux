@@ -7,7 +7,7 @@ This lab serves as an exploration of permissions on directories and files within
 
 ## Context:
 
-This lab is constructed from a learning module in the Google Cybersecurity Professional course. The system was already set up and was provided via remote access in a browser, and therefore this lab is not easily recreated. Work shown here is for demonstration and educational purposes only. 
+This lab is constructed from a learning module in the Google Cybersecurity Professional course. The shell was provided via remote access in a browser, and therefore this lab is not easily recreated, as your system will not have some of the files and directories shown below. Work shown here is for demonstration and educational purposes only. 
 
 For a list of commands used in this lab, please see the end of the lab. For more information on these commands and their options, please refer to the 'man' page for each of them inside your linux bash shell. Some items in this lab are highlighted as inline code for ease of reading and understanding the text even though `not everything written that way is actually a code or command`. Screenshots are provided which show all actual commands being used. 
 
