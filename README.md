@@ -37,7 +37,8 @@ In this section, we’ll first discuss the possible characters and what each mea
 As you may note on observation, each string consists of a series of letters or hyphens. The characters used are as follows:
 
 * A `d` at the beginning of a string represents the permissions for a directory
-* A `-` (hyphen) at the beginning of a string represents the permissions for a file. If located within the string, the hyphen means that the permission has been revoked. 
+* A `-` (hyphen) at the beginning of a string represents the permissions for a file. If located within the string, the hyphen means that the permission has been revoked.
+* An `l` may be present on some entries depending on what part of the operating system you are in. This stands for "library," we will not be covering these in this lab.
 * An `r` means that `read` permissions are granted. 
 * A `w` means that `write` permissions are granted.
 * An `x` means that `execute` permissions are granted. 
